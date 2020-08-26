@@ -1,26 +1,26 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.6.9;
- 
+
 import "./ConvertLib.sol";
 import "./EIP20Interface.sol";
 
 //Based on https://github.com/ConsenSys/Tokens. 
 contract CryptoCartelToken is EIP20Interface {
- 	mapping (address => uint256) public balances;
+    mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
 
-	string public name = "Crypto Cartel Token";  //fancy name
+    string public name = "Crypto Cartel Token";  //fancy name
     uint8 public decimals = 8;                   //How many decimals to show.
     string public symbol = "CRCT";               //ticker
     uint256 constant private MAX_UINT256 = 2**256 - 1;
 
-	constructor() public {
-		balances[tx.origin] = 50000; // Give the creator all initial tokens TODO: airdrop to list of addresses
-		totalSupply = 50000; //Set total supply
-	}
+    constructor() public {
+        balances[tx.origin] = 50000; // Give the creator all initial tokens TODO: airdrop to list of addresses
+        totalSupply = 50000; //Set total supply
+    }
 
     //Simple transfer
-	function transfer(address _to, uint256 _value) override public  returns (bool success) {
+    function transfer(address _to, uint256 _value) override public  returns (bool success) {
         require(balances[msg.sender] >= _value);
         balances[msg.sender] -= _value;
         balances[_to] += _value;
@@ -31,7 +31,7 @@ contract CryptoCartelToken is EIP20Interface {
     //Get balance of address
     function balanceOf(address _owner) override public view returns (uint256 balance) {
         return balances[_owner];
-    }  
+    }
     
     //Caller approves _spender to claim _value tokens?
     function approve(address _spender, uint256 _value) override public returns (bool success) {
@@ -59,8 +59,8 @@ contract CryptoCartelToken is EIP20Interface {
     }
 
     //Not needed
-	function getBalanceInEth(address addr) public view returns(uint){
-		//Saying 1 coin = 2 eth
-		return ConvertLib.convert(balanceOf(addr),2);
+    function getBalanceInEth(address addr) public view returns(uint){
+        //Saying 1 coin = 2 eth
+        return ConvertLib.convert(balanceOf(addr),2);
 	}
 }
