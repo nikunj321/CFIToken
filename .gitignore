@@ -19,8 +19,10 @@ contracts/Standard_Token_Factory/config/test/contracts.json
 Token_Contracts/environments/test/contracts/
 secrets.json
 
+#Secret configs
+# ================================================
+secrets.json
 
 # Other
 # ================================================
 bower_components
-truffle-config.js
