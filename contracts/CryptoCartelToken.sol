@@ -15,7 +15,7 @@ contract CryptoCartelToken is EIP20Interface {
     uint256 constant private MAX_UINT256 = 2**256 - 1;
 
     constructor() public {
-        balances[tx.origin] = 50000; // Give the creator all initial tokens TODO: airdrop to list of addresses
+        balances[tx.origin] = 5000000000000; // Give the creator all initial 50000 with 8 decimals
         totalSupply = 50000; //Set total supply
     }
 
