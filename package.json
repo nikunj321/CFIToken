@@ -1,0 +1,34 @@
+{
+  "name": "cryptocarteltoken",
+  "version": "1.0.0",
+  "description": "Crypto Cartel Token",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: lol no tests, just put your money in\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7--/CryptoCartelToken.git"
+  },
+  "keywords": [
+    "crypto cartel",
+    "cryptocurrencies",
+    "erc20",
+    "erc-20",
+    "eth",
+    "ethereum"
+  ],
+  "author": "Whatthephil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7--/CryptoCartelToken/issues"
+  },
+  "homepage": "https://github.com/7--/CryptoCartelToken#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
