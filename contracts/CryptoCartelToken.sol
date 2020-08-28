@@ -16,7 +16,7 @@ contract CryptoCartelToken is EIP20Interface {
 
     constructor() public {
         balances[tx.origin] = 5000000000000; // Give the creator all initial 50000 with 8 decimals
-        totalSupply = 50000; //Set total supply
+        totalSupply = 5000000000000; //Set total supply to 50k
     }
 
     //Simple transfer
