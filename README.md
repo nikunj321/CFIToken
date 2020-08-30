@@ -1,15 +1,17 @@
 ***This token is for the Crypto Cartel Discord.***  
 https://discord.gg/cryptocartel  
   
-**TODO:**  
-*-Further testing on Ropsten test network.*  
+**Highlights**  
+*Standard ERC-20 token that follows best practices. Uses latest stable Solidity version 6.9. No burn, no rebase.*  
+*Initial supply of 50,000 tokens. 150 token airdrop to top 326 Crypto Cartel members (49,000).*  
+*1% for initial pool. 1% for funding development.*  
+*Initial pool 3 ETH and 1% of token's supply. Initial market cap 300 ETH = $126,000 @ $420ETH*  
   
-*-Figure out how to do token airdrop cheaply.*  
-This way looks like the cheapest way but would be challenging:  
-https://github.com/bonedaddy/Postables-Payment-Channel/blob/develop/solidity/AirDropChannels.sol  
-or Merkle airdrop?  
-https://github.com/smartzplatform/constructor-eth-merkle-airdrop  
-https://smartz.io/deploy/7619f96bbb137ac74b41c093/1  
+  
+**TODO:**  
+*-Further testing on Kovan test network.*  
+*-Find contract to do airdrop.*  
+*-Estimate gas costs.*  
   
 **Setup** (Haven't tried from scratch, lmk if not working) 
 1. `npm install`  (install dependencies)  
@@ -21,7 +23,7 @@ https://smartz.io/deploy/7619f96bbb137ac74b41c093/1
 2. `truggle migrate`  (deploy contracts)
 3. `truffle console`  (console to run commands. Try these commands using CryptoCartel instead of MetaCoin https://www.trufflesuite.com/docs/truffle/quickstart#interacting-with-the-contract)  
   
-**Ropsten Testnet Setup:**  
+**Ropsten/Kovan Testnet Setup:**  
 1. Create secrets.json in this directory:  
 {  
     "mnemonic":"YOUR MNEMONIC PRIVATE KEY HERE"  
@@ -29,3 +31,12 @@ https://smartz.io/deploy/7619f96bbb137ac74b41c093/1
 }  
 2. `truffle migrate --network ropsten`  
 3. `truffle console --network ropsten`  
+  
+   
+  
+*Notes*  
+Merkle airdrop?  
+https://github.com/smartzplatform/constructor-eth-merkle-airdrop  
+https://smartz.io/deploy/7619f96bbb137ac74b41c093/1  
+Not sure if this works/ready  
+https://github.com/bonedaddy/Postables-Payment-Channel/blob/develop/solidity/AirDropChannels.sol  
