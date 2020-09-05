@@ -30,9 +30,15 @@ module.exports = {
     },
     kovan: {
       provider: function() {
-        return new HDWalletProvider(secrets.mnemonic, "https://kovan.infura.io/v3/"+secrets.infuraApiKey);
+        return new HDWalletProvider(secrets.mnemonic, "https://kovan.infura.io/v3/"+secrets.infuraApiKey, 0); //3rd argument, index of account in mnemonic
       },
       network_id: '42',
+    },
+    rinkeby: {
+      provider: function() {
+        return new HDWalletProvider(secrets.mnemonic, "https://rinkeby.infura.io/v3/"+secrets.infuraApiKey);
+      },
+      network_id: '4',
     }
   }
 };

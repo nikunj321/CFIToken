@@ -9,14 +9,14 @@ contract CryptoCartelToken is EIP20Interface {
     mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
 
-    string public name = "Crypto Cartel Token";  //fancy name
-    uint8 public decimals = 8;                   //How many decimals to show.
-    string public symbol = "CRCT";               //ticker
+    string public name = "cartel.finance";  //fancy name
+    uint8 public decimals = 4;                   //How many decimals to show.
+    string public symbol = "CFI";               //ticker
     uint256 constant private MAX_UINT256 = 2**256 - 1;
 
     constructor() public {
-        balances[tx.origin] = 5000000000000; // Give the creator all initial 50000 with 8 decimals
-        totalSupply = 5000000000000; //Set total supply to 50k
+        balances[tx.origin] = 500000000; // Give the creator all initial 50000 with 4 decimals
+        totalSupply = 500000000; //Set total supply to 50k
     }
 
     //Simple transfer

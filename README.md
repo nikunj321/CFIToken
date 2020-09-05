@@ -1,19 +1,18 @@
-***This token is for the Crypto Cartel Discord.***  
+***cartel.finance***  
+***This is a community project for the traders at the Crypto Cartel Discord.***  
 https://discord.gg/cryptocartel  
   
 **Highlights**  
-*Standard ERC-20 token that follows best practices. Uses latest stable Solidity version 6.9. No burn, no rebase.*  
-*Initial supply of 50,000 tokens. 150 token airdrop to top 326 Crypto Cartel members (49,000).*  
-*1% for initial pool. 1% for funding development.*  
-*Initial pool 3 ETH and 1% of token's supply. Initial market cap 300 ETH = $126,000 @ $420ETH*  
-  
+*-Standard ERC-20 token following best practices. Uses Solidity version 6.9. No burn, no rebase.*  
+*-Initial supply of 50,000 tokens. 500 token airdrop to top 48 Crypto Cartel members (48,000).*  
+*-Initial pool 3 ETH and 2% of token's supply. Initial market cap 150 ETH = $60,000 @ $400ETH*  
   
 **TODO:**  
 *-Further testing on Kovan test network.*  
-*-Find contract to do airdrop.*  
+*-Add airdrop function*
 *-Estimate gas costs.*  
-  
-**Setup** (Haven't tried from scratch, lmk if not working) 
+
+**Setup** 
 1. `npm install`  (install dependencies)  
 2. `npm install -g truffle` (install truffle globally)  
 3. Install VS Code and install *juanblanco.solidity* extension using Solidity *version v0.6.9+commit.3e3065ac.js* https://ethereum.stackexchange.com/a/63102/28140  
@@ -32,11 +31,3 @@ https://discord.gg/cryptocartel
 2. `truffle migrate --network ropsten`  
 3. `truffle console --network ropsten`  
   
-   
-  
-*Notes*  
-Merkle airdrop?  
-https://github.com/smartzplatform/constructor-eth-merkle-airdrop  
-https://smartz.io/deploy/7619f96bbb137ac74b41c093/1  
-Not sure if this works/ready  
-https://github.com/bonedaddy/Postables-Payment-Channel/blob/develop/solidity/AirDropChannels.sol  
