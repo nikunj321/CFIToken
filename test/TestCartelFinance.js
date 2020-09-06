@@ -1,11 +1,11 @@
-var cryptoCartelToken = artifacts.require("./CryptoCartelToken.sol");
+var cartelFinance = artifacts.require("./CartelFinance.sol");
 
 
-cryptoCartelToken.web3.eth.getGasPrice(function(error, result){ 
+cartelFinance.web3.eth.getGasPrice(function(error, result){ 
     var gasPrice = Number(result);
     console.log("Gas Price is " + gasPrice + " wei"); // "10000000000000"
 
-    cryptoCartelToken.deployed().then(function(instance) {
+    cartelFinance.deployed().then(function(instance) {
 
         // Use the keyword 'estimateGas' after the function name to get the gas estimation for this particular function 
         return instance.transfer.estimateGas("0x42702BC69672E7F3Ff915615cE575E636e6e6044",150);
@@ -15,7 +15,7 @@ cryptoCartelToken.web3.eth.getGasPrice(function(error, result){
 
         console.log("gas estimation = " + gas + " units");
         console.log("gas cost estimation = " + (gas * gasPrice) + " wei");
-        console.log("gas cost estimation = " + cryptoCartelToken.web3.fromWei((gas * gasPrice), 'ether') + " ether");
+        console.log("gas cost estimation = " + cartelFinance.web3.fromWei((gas * gasPrice), 'ether') + " ether");
     });
 });
 

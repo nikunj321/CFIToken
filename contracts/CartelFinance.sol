@@ -1,11 +1,10 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.6.9;
 
-import "./ConvertLib.sol";
 import "./EIP20Interface.sol";
 
 //Based on https://github.com/ConsenSys/Tokens. 
-contract CryptoCartelToken is EIP20Interface {
+contract CartelFinance is EIP20Interface {
     mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
 
@@ -57,10 +56,4 @@ contract CryptoCartelToken is EIP20Interface {
         emit Transfer(_from, _to, _value); //solhint-disable-line indent, no-unused-vars
         return true;
     }
-
-    //Not needed
-    function getBalanceInEth(address addr) public view returns(uint){
-        //Saying 1 coin = 2 eth
-        return ConvertLib.convert(balanceOf(addr),2);
-	}
 }
