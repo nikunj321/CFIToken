@@ -14,8 +14,8 @@ contract CartelFinance is EIP20Interface {
     uint256 constant private MAX_UINT256 = 2**256 - 1;
 
     constructor() public {
-        balances[tx.origin] = 500000000; // Give the creator all initial 50000 with 4 decimals
-        totalSupply = 500000000; //Set total supply to 50k
+        balances[tx.origin] = 500000000; 
+        totalSupply = 500000000; //Set total supply to 50k?
     }
 
     //Simple transfer
@@ -30,6 +30,10 @@ contract CartelFinance is EIP20Interface {
     //Get balance of address
     function balanceOf(address _owner) override public view returns (uint256 balance) {
         return balances[_owner];
+    }
+
+    function getTotalSupply() public view returns (uint256 balance) {
+        return totalSupply;
     }
     
     //Caller approves _spender to claim _value tokens?

@@ -1,8 +1,8 @@
 {
-  "name": "cryptocarteltoken",
+  "name": "cartel.finance",
   "version": "1.0.0",
-  "description": "Crypto Cartel Token",
-  "main": "truffle-config.js",
+  "description": "cartel.finance $CFI Crypto Cartel Discord",
+  "main": "truffle-config",
   "directories": {
     "test": "test"
   },
@@ -11,9 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/7--/CryptoCartelToken.git"
+    "url": "https://github.com/CartelFinance/CFIToken"
   },
   "keywords": [
+    "cartel.finance",
+    "cartel finance",
     "crypto cartel",
     "cryptocurrencies",
     "erc20",
@@ -24,11 +26,16 @@
   "author": "Whatthephil",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/7--/CryptoCartelToken/issues"
+    "url": "https://github.com/CartelFinance/CFIToken/issues"
   },
-  "homepage": "https://github.com/7--/CryptoCartelToken#readme",
+  "homepage": "https://cartel.finance",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "request": "2.79.0",
+    "solc": "^0.6.12",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "1.2.11"
   }
 }

@@ -26,6 +26,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(secrets.mnemonic, "https://ropsten.infura.io/v3/"+secrets.infuraApiKey);
       },
+      gas: 2014918, //gas value sent?
       network_id: '3',
     },
     kovan: {
