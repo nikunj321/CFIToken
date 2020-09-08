@@ -8,14 +8,14 @@ contract CartelFinance is EIP20Interface {
     mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
 
-    string public name = "cartel.finance";  //fancy name
-    uint8 public decimals = 4;                   //How many decimals to show.
-    string public symbol = "CFI";               //ticker
+    string public name = "cartel.finance";
+    uint8 public decimals = 4;
+    string public symbol = "CFI";
     uint256 constant private MAX_UINT256 = 2**256 - 1;
 
     constructor() public {
         balances[tx.origin] = 500000000; 
-        totalSupply = 500000000; //Set total supply to 50k?
+        totalSupply = 500000000;
     }
 
     //Simple transfer
@@ -31,24 +31,17 @@ contract CartelFinance is EIP20Interface {
     function balanceOf(address _owner) override public view returns (uint256 balance) {
         return balances[_owner];
     }
-
-    function getTotalSupply() public view returns (uint256 balance) {
-        return totalSupply;
-    }
     
-    //Caller approves _spender to claim _value tokens?
     function approve(address _spender, uint256 _value) override public returns (bool success) {
         allowed[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value); //solhint-disable-line indent, no-unused-vars
         return true;
     }
  
-    //Money _owner approved to give spender?
     function allowance(address _owner, address _spender) override public view returns (uint256 remaining) {
         return allowed[_owner][_spender];
     }
 
-    //Transfer if _to was given an allowance?
     function transferFrom(address _from, address _to, uint256 _value) override public returns (bool success) {
         uint256 tokenAllowance = allowed[_from][msg.sender];
         require(balances[_from] >= _value && tokenAllowance >= _value);

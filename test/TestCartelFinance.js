@@ -1,23 +1,22 @@
-var cartelFinance = artifacts.require("./CartelFinance.sol");
+var cartelFinance = artifacts.require("CartelFinance.sol");
+var solc = require('solc');
+module.exports = function(callback) {
 
+    cartelFinance.web3.eth.getGasPrice(function(error, result){ 
+        var gasPrice = Number(result);
+        console.log("Gas Price is " + gasPrice + " wei"); // "10000000000000"
 
-cartelFinance.web3.eth.getGasPrice(function(error, result){ 
-    var gasPrice = Number(result);
-    console.log("Gas Price is " + gasPrice + " wei"); // "10000000000000"
+        var cartelFinanceContract = new web3.eth.Contract(cartelFinance._json.abi);
+        var contractData = cartelFinanceContract.new.getData({data: cartelFinance._json.bytecode});
+        var gas = Number(web3.eth.estimateGas({data: contractData}));
 
-    cartelFinance.deployed().then(function(instance) {
-
-        // Use the keyword 'estimateGas' after the function name to get the gas estimation for this particular function 
-        return instance.transfer.estimateGas("0x42702BC69672E7F3Ff915615cE575E636e6e6044",150);
-
-    }).then(function(result) {
-        var gas = Number(result);
 
         console.log("gas estimation = " + gas + " units");
         console.log("gas cost estimation = " + (gas * gasPrice) + " wei");
         console.log("gas cost estimation = " + cartelFinance.web3.fromWei((gas * gasPrice), 'ether') + " ether");
+
     });
-});
+};
 
 // Run unit tests to populate my contract
 // ...
