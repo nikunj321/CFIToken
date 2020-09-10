@@ -9,18 +9,18 @@ https://discord.gg/cryptocartel
 *-Fully and evenly distributed airdrop. No ICO. No mint function. No lockup. No dev fund.*  
 *-Contract address: 0x4FeA2109624A515968167d4015e54f70D28435eE*  
   
-**To Do**
-*-Build website*  
-*-Add logo to Uniswap*  
-*-Update etherscan.io details*  
+**To Do**  
+-Build website  
+-Add logo to Uniswap 
+-Update etherscan.io details  
   
-**Roadmap**
-Bamboo Relay Exchange listing  
-Layer 2 Exchange listing  
-Farming/Staking  
-Bridge to Serum DEX or Binance Chain DEX   
+**Roadmap**  
+-Bamboo Relay Exchange listing  
+-Layer 2 Exchange listing  
+-Farming/Staking  
+-Bridge to Serum DEX or Binance Chain DEX   
   
-**Setup** 
+**Setup:**  
 1. `npm install`  (install dependencies)  
 2. `npm install -g truffle` (install truffle globally)  
 3. Install VS Code and install *juanblanco.solidity* extension using Solidity *version v0.6.9+commit.3e3065ac.js* https://ethereum.stackexchange.com/a/63102/28140  
