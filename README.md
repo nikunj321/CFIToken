@@ -11,7 +11,7 @@ https://discord.gg/cryptocartel
   
 **To Do**  
 -Build website  
--Add logo to Uniswap 
+-Add logo to Uniswap  
 -Update etherscan.io details  
   
 **Roadmap**  
