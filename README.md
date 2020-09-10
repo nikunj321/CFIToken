@@ -1,6 +1,4 @@
 ***cartel.finance***  
-***This is a community project for the traders at the Crypto Cartel Discord.***  
-https://discord.gg/cryptocartel  
   
 **Highlights**  
 *-Compliant ERC-20 token following best practices. Uses Solidity version 6.9. No burn or rebase.*  
