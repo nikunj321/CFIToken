@@ -2,7 +2,7 @@
   
 **Highlights**  
 *-Compliant ERC-20 token following best practices. Uses Solidity version 6.9. No burn or rebase.*  
-*-Total supply of 50,000. 1000 token airdrop to 49 Crypto Cartel members (49,000).*  
+*-Total supply of 50,000. 1000 token airdrop to 49 most dedicated DeFi Crypto Cartel members (49,000).*  
 *-Initial uniswap pool 3 ETH and 2% (1000) of token's supply. Initial market cap 150 ETH = $60,000 @ $400ETH*  
 *-Fully and evenly distributed airdrop. No ICO. No mint function. No lockup. No dev fund.*  
 *-Contract address: 0x4FeA2109624A515968167d4015e54f70D28435eE*  
