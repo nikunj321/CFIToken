@@ -3,15 +3,23 @@
 https://discord.gg/cryptocartel  
   
 **Highlights**  
-*-Standard ERC-20 token following best practices. Uses Solidity version 6.9. No burn, no rebase.*  
-*-Initial supply of 50,000 tokens. 500 token airdrop to top 48 Crypto Cartel members (48,000).*  
-*-Initial pool 3 ETH and 2% of token's supply. Initial market cap 150 ETH = $60,000 @ $400ETH*  
+*-Compliant ERC-20 token following best practices. Uses Solidity version 6.9. No burn or rebase.*  
+*-Total supply of 50,000. 1000 token airdrop to top 49 Crypto Cartel members (49,000).*  
+*-Initial uniswap pool 3 ETH and 2% (1000) of token's supply. Initial market cap 150 ETH = $60,000 @ $400ETH*  
+*-Fully and evenly distributed airdrop. No ICO. No mint function. No lockup. No dev fund.*  
+*-Contract address: 0x4FeA2109624A515968167d4015e54f70D28435eE*  
   
-**TODO:**  
-*-Further testing on Kovan test network.*  
-*-Add airdrop function*
-*-Estimate gas costs.*  
-
+**To Do**
+*-Build website*  
+*-Add logo to Uniswap*  
+*-Update etherscan.io details*  
+  
+**Roadmap**
+Bamboo Relay Exchange listing  
+Layer 2 Exchange listing  
+Farming/Staking  
+Bridge to Serum DEX or Binance Chain DEX   
+  
 **Setup** 
 1. `npm install`  (install dependencies)  
 2. `npm install -g truffle` (install truffle globally)  
@@ -22,12 +30,14 @@ https://discord.gg/cryptocartel
 2. `truggle migrate`  (deploy contracts)
 3. `truffle console`  (console to run commands. Try these commands using CryptoCartel instead of MetaCoin https://www.trufflesuite.com/docs/truffle/quickstart#interacting-with-the-contract)  
   
-**Ropsten/Kovan Testnet Setup:**  
+**Ropsten/Kovan/Live Testnet Setup:**  
 1. Create secrets.json in this directory:  
+```javascript
 {  
     "mnemonic":"YOUR MNEMONIC PRIVATE KEY HERE"  
     "infuraApiKey":"YOUR INFURA API KEY"  
 }  
+```
 2. `truffle migrate --network ropsten`  
 3. `truffle console --network ropsten`  
   
