@@ -25,7 +25,7 @@
      
 **Local Setup:**  
 1. Install Ganache (https://www.trufflesuite.com/ganache) and setup environment at 127.0.0.1 port 7545  
-2. `truggle migrate`  (deploy contracts)
+2. `truffle migrate`  (deploy contracts)
 3. `truffle console`  (console to run commands. Try these commands using CryptoCartel instead of MetaCoin https://www.trufflesuite.com/docs/truffle/quickstart#interacting-with-the-contract)  
   
 **Ropsten/Kovan/Live Testnet Setup:**  
