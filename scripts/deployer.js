@@ -90,7 +90,7 @@ web3.eth.personal.unlockAccount(owner, "", 120000, function (err, success) { //u
 
 function deployContract(contract, fileName) {
     return new Promise((resolve, reject) => {
-        web3.eth.contract(contract.interface).new({
+        web3.eth.Contract(contract.interface).new({
             data: "0x" + contract.bytecode,
             gas: 900000, // If you get gas issue please change this value according error
             // privateFor: [],
